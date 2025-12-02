@@ -25,7 +25,7 @@ const blogPosts = {
       <h3>Conclusion</h3>
       <p>Investing in a modern kitchen design not only enhances your home's value but also improves your daily cooking experience. Our team at The Home Care specializes in creating custom kitchen solutions tailored to your lifestyle.</p>
     `,
-    image: 'Kitchen/istockphoto-2149909394-2048x2048.jpg',
+    image: 'istockphoto-2149909394-2048x2048.jpg',
     date: 'Dec 1, 2025',
     category: 'Kitchen Design',
     author: 'The Home Care Team',
@@ -52,7 +52,7 @@ const blogPosts = {
       <h3>Create Your Dream Space</h3>
       <p>Let us help you design a bedroom that promotes rest, relaxation, and rejuvenation. Our expert team creates customized bedroom solutions that match your style and needs.</p>
     `,
-    image: 'Bedroom/small-juvenile-bedroom-arrangement_23-2151113854.jpg',
+    image: 'small-juvenile-bedroom-arrangement_23-2151113778.jpg',
     date: 'Nov 28, 2025',
     category: 'Bedroom Design',
     author: 'The Home Care Team',
@@ -79,7 +79,7 @@ const blogPosts = {
       <h3>Transform Your Space</h3>
       <p>Our design experts specialize in making small spaces feel grand. Contact us for a personalized living room makeover consultation.</p>
     `,
-    image: 'Living Room/illustration-living-room-interior_252025-174853.jpg',
+    image: 'illustration-living-room-interior_252025-174853.jpg',
     date: 'Nov 25, 2025',
     category: 'Living Room',
     author: 'The Home Care Team',
@@ -106,7 +106,7 @@ const blogPosts = {
       <h3>Expert Installation</h3>
       <p>Professional installation ensures safety and longevity. Our team provides complete false ceiling solutions with warranty and after-sales support.</p>
     `,
-    image: 'False Ceiling/istockphoto-1093464902-1024x1024.jpg',
+    image: 'istockphoto-504855059-2048x2048.jpg',
     date: 'Nov 22, 2025',
     category: 'False Ceiling',
     author: 'The Home Care Team',
@@ -133,7 +133,7 @@ const blogPosts = {
       <h3>Customized Solutions</h3>
       <p>Whether you need a corner desk or a full room conversion, we create home offices that boost your productivity and reflect your professional image.</p>
     `,
-    image: 'Home Office/modern-home-workplace-with-desk-bookcase-3d-rendering_960782-70862.jpg',
+    image: 'ai-generated-ai-generative-vintage-retro-style-cozy-artist-home-room-office-table-creation-inspirational-space-graphic-art_95211-13974.jpg',
     date: 'Nov 20, 2025',
     category: 'Home Office',
     author: 'The Home Care Team',
@@ -160,7 +160,7 @@ const blogPosts = {
       <h3>Professional Design</h3>
       <p>Our wardrobe systems are tailored to your specific needs, ensuring everything has its place and your morning routine is streamlined.</p>
     `,
-    image: 'Wardrobe/istockphoto-1002112474-2048x2048.jpg',
+    image: 'istockphoto-615822976-2048x2048.jpg',
     date: 'Nov 18, 2025',
     category: 'Wardrobe',
     author: 'The Home Care Team',
@@ -187,7 +187,7 @@ const blogPosts = {
       <h3>Elegant Solutions</h3>
       <p>From formal dining rooms to casual breakfast nooks, we design dining spaces that bring people together and create lasting memories.</p>
     `,
-    image: 'Dining Room/istockphoto-478373146-2048x2048.jpg',
+    image: 'istockphoto-686989268-2048x2048.jpg',
     date: 'Nov 15, 2025',
     category: 'Dining Room',
     author: 'The Home Care Team',
@@ -214,7 +214,7 @@ const blogPosts = {
       <h3>Expert Guidance</h3>
       <p>Our design consultants help you select color schemes that reflect your personality while creating the desired atmosphere in each room.</p>
     `,
-    image: 'Living Room/ff3.jpg',
+    image: 'ff3.jpg',
     date: 'Nov 12, 2025',
     category: 'Design Tips',
     author: 'The Home Care Team',
@@ -261,7 +261,6 @@ export default function BlogPost({ params }: { params: { id: string } }) {
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 1200px"
             className="object-cover"
             priority
-            quality={85}
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-60"></div>
           <div className="absolute bottom-0 left-0 right-0 p-8 text-white">

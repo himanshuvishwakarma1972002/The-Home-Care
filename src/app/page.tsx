@@ -1,4 +1,4 @@
-'use client';
+ 'use client';
 
 import Image from 'next/image';
 import Link from 'next/link';
@@ -87,7 +87,7 @@ export default function Home() {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % heroSlides.length);
-    }, 5000); // Change slide every 5 seconds
+    }, 5000);
 
     return () => clearInterval(interval);
   }, []);
@@ -110,7 +110,7 @@ export default function Home() {
           />
           <div className="absolute inset-0 bg-black bg-opacity-30"></div>
         </div>
-        
+
         {/* Slider arrows */}
         <button
           type="button"
@@ -367,4 +367,5 @@ export default function Home() {
     </>
   );
 }
+
 

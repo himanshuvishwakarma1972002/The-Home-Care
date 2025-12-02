@@ -63,8 +63,8 @@ export default function Navigation() {
             className="fixed inset-0 bg-black bg-opacity-60 z-40 md:hidden backdrop-blur-sm"
             onClick={() => setIsOpen(false)}
           />
-          <div className="fixed top-0 right-0 h-full w-72 bg-gradient-to-b from-gray-900 to-black z-50 md:hidden shadow-2xl">
-            <div className="p-6">
+          <div className="fixed top-0 right-0 h-full w-72 bg-gray-900 z-50 md:hidden shadow-2xl">
+            <div className="p-6 bg-gray-900">
               <div className="flex items-center justify-between mb-8">
                 <h3 className="text-white font-bold text-lg">Menu</h3>
                 <button 

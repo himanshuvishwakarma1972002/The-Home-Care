@@ -11,7 +11,7 @@ const products = [
     id: 'kitchen-cabinet-set',
     name: 'Modern Kitchen Cabinet Set',
     price: 45999,
-    image: 'Kitchen/istockphoto-2149909394-2048x2048.jpg',
+    image: 'istockphoto-2149909394-2048x2048.jpg',
     category: 'Kitchen',
     description: 'Complete modular kitchen cabinet system',
   },
@@ -19,7 +19,7 @@ const products = [
     id: 'bedroom-furniture',
     name: 'Bedroom Furniture Collection',
     price: 89999,
-    image: 'Bedroom/small-juvenile-bedroom-arrangement_23-2151113854.jpg',
+    image: 'small-juvenile-bedroom-arrangement_23-2151113778.jpg',
     category: 'Bedroom',
     description: 'Elegant bedroom furniture set',
   },
@@ -27,7 +27,7 @@ const products = [
     id: 'living-room-sofa',
     name: 'Premium Living Room Sofa',
     price: 54999,
-    image: 'Living Room/illustration-living-room-interior_252025-174853.jpg',
+    image: 'illustration-living-room-interior_252025-174853.jpg',
     category: 'Living Room',
     description: 'Comfortable and stylish sofa set',
   },
@@ -35,7 +35,7 @@ const products = [
     id: 'dining-table',
     name: 'Dining Table with Chairs',
     price: 34999,
-    image: 'Dining Room/istockphoto-478373146-2048x2048.jpg',
+    image: 'istockphoto-686989268-2048x2048.jpg',
     category: 'Dining Room',
     description: '6-seater dining table set',
   },
@@ -43,7 +43,7 @@ const products = [
     id: 'wardrobe-system',
     name: 'Custom Wardrobe System',
     price: 67999,
-    image: 'Wardrobe/istockphoto-1002112474-2048x2048.jpg',
+    image: 'istockphoto-615822976-2048x2048.jpg',
     category: 'Wardrobe',
     description: 'Modular wardrobe with sliding doors',
   },
@@ -51,7 +51,7 @@ const products = [
     id: 'office-desk',
     name: 'Home Office Desk Setup',
     price: 29999,
-    image: 'Home Office/modern-home-workplace-with-desk-bookcase-3d-rendering_960782-70862.jpg',
+    image: 'modern-home-workplace-with-desk-bookcase-3d-rendering_960782-70862.jpg',
     category: 'Home Office',
     description: 'Complete office desk with storage',
   },
@@ -59,7 +59,7 @@ const products = [
     id: 'false-ceiling',
     name: 'False Ceiling Design Package',
     price: 15999,
-    image: 'False Ceiling/istockphoto-1093464902-1024x1024.jpg',
+    image: 'istockphoto-504855059-2048x2048.jpg',
     category: 'False Ceiling',
     description: 'Complete false ceiling installation',
   },
@@ -83,10 +83,7 @@ export default function Products() {
                       src={`/images/${product.image}`}
                       alt={product.name}
                       fill
-                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
                       className="object-cover hover:scale-110 transition-transform duration-500"
-                      loading="lazy"
-                      quality={75}
                     />
                     <div className="absolute top-4 right-4 bg-primary text-white px-3 py-1 rounded-full text-sm font-semibold">
                       {product.category}
