@@ -13,7 +13,7 @@ export default function Header() {
                 src="/images/home-care-logo-icon-design-vector-22560864.jpg"
                 alt="The Home Care Logo"
                 fill
-                sizes="64px"
+                sizes="(max-width: 768px) 64px, 64px"
                 className="rounded-full object-cover ring-2 ring-primary ring-opacity-0 group-hover:ring-opacity-100 transition-all duration-300"
                 priority
               />
