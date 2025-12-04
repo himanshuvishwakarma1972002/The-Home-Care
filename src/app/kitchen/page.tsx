@@ -130,7 +130,10 @@ function CategorySection({ title, description, items, bgColor = 'bg-gray-50' }: 
                   src={`/images/${item.img}`}
                   alt={item.name}
                   fill
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, (max-width: 1280px) 33vw, 25vw"
                   className="object-cover group-hover:scale-110 transition-transform duration-500"
+                  loading="lazy"
+                  quality={75}
                 />
               </div>
               <div className="p-4 text-center">

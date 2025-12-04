@@ -124,14 +124,14 @@ function BlogCard({ post }: { post: typeof blogPosts[0] }) {
 
   return (
     <article className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300">
-      <Link href={`/blog/${post.id}`}>
+                <Link href={`/blog/${post.id}`}>
         <div className="relative h-64 overflow-hidden group">
           {post.images.map((img, index) => (
-            <Image
+                    <Image
               key={index}
               src={`/images/${img}`}
               alt={`${post.title} - Image ${index + 1}`}
-              fill
+                      fill
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               className={`object-cover transition-opacity duration-700 ${
                 index === currentImageIndex
@@ -155,24 +155,24 @@ function BlogCard({ post }: { post: typeof blogPosts[0] }) {
               />
             ))}
           </div>
-        </div>
-        <div className="p-6">
-          <div className="flex items-center justify-between mb-3">
-            <span className="text-sm text-primary font-semibold">
-              {post.category}
-            </span>
-            <span className="text-sm text-gray-500">{post.date}</span>
-          </div>
-          <h2 className="text-2xl font-bold text-gray-900 mb-3 hover:text-primary transition-colors">
-            {post.title}
-          </h2>
-          <p className="text-gray-600 mb-4">{post.excerpt}</p>
-          <span className="text-primary font-semibold hover:underline">
-            Read More →
-          </span>
-        </div>
-      </Link>
-    </article>
+                  </div>
+                  <div className="p-6">
+                    <div className="flex items-center justify-between mb-3">
+                      <span className="text-sm text-primary font-semibold">
+                        {post.category}
+                      </span>
+                      <span className="text-sm text-gray-500">{post.date}</span>
+                    </div>
+                    <h2 className="text-2xl font-bold text-gray-900 mb-3 hover:text-primary transition-colors">
+                      {post.title}
+                    </h2>
+                    <p className="text-gray-600 mb-4">{post.excerpt}</p>
+                    <span className="text-primary font-semibold hover:underline">
+                      Read More →
+                    </span>
+                  </div>
+                </Link>
+              </article>
   );
 }
 

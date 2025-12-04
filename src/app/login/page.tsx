@@ -139,6 +139,20 @@ export default function Login() {
               <form onSubmit={handleRequestOTP}>
                 <div className="mb-6">
                   <label className="block text-gray-700 font-semibold mb-2">
+                    Full Name
+                  </label>
+                  <input
+                    type="text"
+                    value={name}
+                    onChange={(e) => setName(e.target.value)}
+                    placeholder="Enter your name"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
+                    required
+                  />
+                </div>
+
+                <div className="mb-6">
+                  <label className="block text-gray-700 font-semibold mb-2">
                     Phone Number
                   </label>
                   <input

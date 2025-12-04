@@ -3,6 +3,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
+import BackgroundMusic from '@/components/home/BackgroundMusic';
 
 const heroSlides = [
   { img: 'Living Room/ff3.jpg', title: 'Living Room Designs', text: 'Transform your living space into an inviting haven' },
@@ -19,65 +20,53 @@ const stats = [
   { number: '50+', label: 'Expert Team Members' },
 ];
 
-const services = [
+const offerings = [
   { 
-    title: 'Kitchen Design', 
-    desc: 'Modern, functional kitchen spaces that blend aesthetics with practicality',
-    icon: '🍳',
-    link: '/kitchen#kitchen',
+    title: 'Modular Interiors', 
+    desc: 'Functional kitchen, wardrobe and storage',
+    icon: '🏠',
+    link: '/kitchen',
   },
   { 
-    title: 'Bedroom Solutions', 
-    desc: 'Comfortable and stylish bedrooms designed for rest and relaxation',
-    icon: '🛏️',
-    link: '/kitchen#bedroom',
-  },
-  { 
-    title: 'Living Areas', 
-    desc: 'Inviting spaces for relaxation, entertainment, and family gatherings',
-    icon: '🛋️',
-    link: '/kitchen#living',
-  },
-  { 
-    title: 'Dining Rooms', 
-    desc: 'Elegant dining spaces perfect for everyday meals and special occasions',
-    icon: '🍽️',
-    link: '/kitchen#dining',
-  },
-  { 
-    title: 'Wardrobes', 
-    desc: 'Custom storage solutions that maximize space and organization',
-    icon: '👔',
-    link: '/kitchen#wardrobe',
-  },
-  { 
-    title: 'False Ceilings', 
-    desc: 'Elegant ceiling designs that add depth and character to your spaces',
+    title: 'Full Home Interiors', 
+    desc: 'Turnkey interior solutions for your home',
     icon: '✨',
-    link: '/kitchen#ceiling',
+    link: '/about',
+  },
+  { 
+    title: 'Luxury Interiors', 
+    desc: 'Tailored interiors that redefine elegance',
+    icon: '💎',
+    link: '/products',
+  },
+  { 
+    title: 'Renovations', 
+    desc: 'Expert solutions to upgrade your home',
+    icon: '🔧',
+    link: '/contact',
   },
 ];
 
 const whyChooseUs = [
   {
     icon: '✨',
-    title: 'Expert Design Team',
-    description: 'Our experienced designers bring creativity and expertise to every project.',
+    title: 'Flat 10-year warranty',
+    description: 'Industry-leading warranty coverage for your peace of mind.',
   },
   {
     icon: '🎯',
-    title: 'Premium Materials',
-    description: 'We source only the finest materials to ensure durability and elegance.',
+    title: '45-day move-in guarantee',
+    description: 'We deliver your dream home on time, every time.',
   },
   {
     icon: '🤝',
-    title: 'Timely Delivery',
-    description: 'We respect your time and deliver projects on schedule without compromising quality.',
+    title: '146 quality checks',
+    description: 'Rigorous quality standards to ensure perfection.',
   },
   {
     icon: '💡',
-    title: 'Comprehensive Warranty',
-    description: 'All our work comes with extensive warranty coverage for your peace of mind.',
+    title: '500+ happy homes',
+    description: '98% customer satisfaction with our designs.',
   },
 ];
 
@@ -130,26 +119,26 @@ export default function Home() {
         </button>
 
         <div className="container mx-auto px-4 z-10 relative flex items-end pb-16">
-          <div className="max-w-2xl p-6 md:p-10 rounded-lg">
-            <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
-              Design Your Home, Your Way
+          <div className="max-w-3xl p-6 md:p-10 rounded-lg">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
+              Home to Beautiful Interiors
             </h1>
-            <p className="text-gray-100 text-lg leading-relaxed mb-4">
+            <p className="text-gray-100 text-xl leading-relaxed mb-6">
               Be it end-to-end interiors, renovation or modular solutions, we have it all for your home or office. 
               With a wide range of furniture & decor, we have your back from start to finish.
             </p>
-            <div className="flex gap-4">
+            <div className="flex flex-col sm:flex-row gap-4">
               <Link
                 href="/contact"
-                className="bg-primary text-white px-6 py-3 rounded-lg font-semibold hover:bg-primary-dark transition-colors"
+                className="bg-primary text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-primary-dark transition-colors text-center"
               >
-                Get Started
+                Book Free Consultation
               </Link>
               <Link
                 href="/products"
-                className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-primary transition-colors"
+                className="border-2 border-white bg-white/10 backdrop-blur-sm text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-primary transition-colors text-center"
               >
-                View Products
+                Calculate Cost
               </Link>
             </div>
             {/* Slide indicators */}
@@ -184,41 +173,42 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Services Section */}
-      <section className="py-16 bg-gray-50">
+      {/* Offerings Section - Livspace Style */}
+      <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-4">
-            Our Services
+            One-stop shop for all things interiors
           </h2>
-          <p className="text-center text-gray-600 mb-12 max-w-2xl mx-auto text-lg">
-            Comprehensive interior design services tailored to your unique needs
+          <p className="text-center text-gray-600 mb-12 max-w-3xl mx-auto text-lg">
+            Be it end-to-end interiors, renovation or modular solutions, we have it all for your home or office
           </p>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {services.map((service, index) => (
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {offerings.map((offering, index) => (
               <Link
                 key={index}
-                href={service.link}
-                className="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border border-gray-100 group"
+                href={offering.link}
+                className="bg-gradient-to-br from-gray-50 to-white p-8 rounded-2xl shadow-md hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border border-gray-200 group text-center"
               >
-                <div className="text-5xl mb-4">{service.icon}</div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-primary transition-colors">
-                  {service.title}
+                <div className="text-6xl mb-4">{offering.icon}</div>
+                <h3 className="text-lg font-bold text-gray-900 mb-2 group-hover:text-primary transition-colors">
+                  {offering.title}
                 </h3>
-                <p className="text-gray-600 leading-relaxed">{service.desc}</p>
+                <p className="text-gray-600 text-sm leading-relaxed">{offering.desc}</p>
+                <div className="mt-4 text-primary font-semibold group-hover:underline">→</div>
               </Link>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Gallery Section */}
-      <section className="py-16 bg-white">
+      {/* Design Ideas Section - Livspace Style */}
+      <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-4">
-            Explore Our Work
+            Inspiration for Home Interior Designs
           </h2>
-          <p className="text-center text-gray-600 mb-12 max-w-2xl mx-auto text-lg">
-            Discover our stunning interior design solutions across different categories
+          <p className="text-center text-gray-600 mb-12 max-w-3xl mx-auto text-lg">
+            Give your home a new look with these interior design ideas curated for you
           </p>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
             {[
@@ -265,7 +255,7 @@ export default function Home() {
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {whyChooseUs.map((item, index) => (
               <div 
-                key={index} 
+                key={index}
                 className="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 text-center"
               >
                 <div className="text-5xl mb-4">{item.icon}</div>
@@ -364,6 +354,9 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* Background Music Player */}
+      <BackgroundMusic audioSrc="/audio/Ghostrifter-Official-Purple-Dream(chosic.com).mp3" />
     </>
   );
 }

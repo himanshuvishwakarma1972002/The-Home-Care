@@ -3,12 +3,12 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useState } from 'react';
 import { useAuth } from '@/contexts/AuthContext';
+import DesignIdeasDropdown from './DesignIdeasDropdown';
 
 const navItems = [
   { href: '/', label: 'Home' },
   { href: '/about', label: 'About' },
-  { href: '/kitchen', label: 'Categories' },
-  { href: '/blog', label: 'Blog' },
+  { href: '/blog', label: 'Magazine' },
   { href: '/products', label: 'Products' },
 ];
 
@@ -55,6 +55,11 @@ export default function Navigation() {
             </Link>
           </li>
         ))}
+        
+        {/* Design Ideas Dropdown */}
+        <li>
+          <DesignIdeasDropdown />
+        </li>
         
         {/* Profile/Login Button */}
         {isAuthenticated && user ? (
@@ -121,6 +126,21 @@ export default function Navigation() {
                     </Link>
                   </li>
                 ))}
+                
+                {/* Design Ideas in Mobile */}
+                <li>
+                  <Link 
+                    href="/kitchen"
+                    className={`block px-4 py-3 rounded-lg text-lg font-medium transition-all ${
+                      pathname === '/kitchen'
+                        ? 'bg-primary text-white'
+                        : 'text-gray-300 hover:text-white hover:bg-gray-800'
+                    }`}
+                    onClick={() => setIsOpen(false)}
+                  >
+                    🎨 Design Ideas
+                  </Link>
+                </li>
                 
                 {/* Profile/Login in Mobile */}
                 {isAuthenticated && user ? (
